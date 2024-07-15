@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeacherCell" rowHeight="60" id="KGk-i7-Jjw" customClass="TeacherCell" customModule="day1_exercise" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1af-tF-K0z">
+                        <rect key="frame" x="5" y="5" width="50" height="50"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Qze-lU-yX0"/>
+                            <constraint firstAttribute="height" constant="50" id="mSa-rO-noH"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TFK-bi-6FJ">
+                        <rect key="frame" x="60" y="5" width="292" height="44.666666666666664"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-56-XyF">
+                                <rect key="frame" x="0.0" y="0.0" width="292" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Philippines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpz-f6-bw7">
+                                <rect key="frame" x="0.0" y="24.333333333333336" width="292" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1af-tF-K0z" secondAttribute="bottom" constant="5" id="CSO-7e-GDh"/>
+                    <constraint firstItem="1af-tF-K0z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Nwy-cH-kWP"/>
+                    <constraint firstItem="1af-tF-K0z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NzO-QV-hN1"/>
+                    <constraint firstAttribute="trailing" secondItem="TFK-bi-6FJ" secondAttribute="trailing" constant="5" id="Stj-vc-FGb"/>
+                    <constraint firstItem="TFK-bi-6FJ" firstAttribute="leading" secondItem="1af-tF-K0z" secondAttribute="trailing" constant="5" id="ozZ-Ls-s2b"/>
+                    <constraint firstItem="TFK-bi-6FJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="y0X-EY-2a0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="teacherCountry" destination="Fpz-f6-bw7" id="KAS-pb-6nJ"/>
+                <outlet property="teacherImageView" destination="1af-tF-K0z" id="VpV-0l-DNB"/>
+                <outlet property="teacherName" destination="SPL-56-XyF" id="fnf-kc-kKv"/>
+            </connections>
+            <point key="canvasLocation" x="85" y="24"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
