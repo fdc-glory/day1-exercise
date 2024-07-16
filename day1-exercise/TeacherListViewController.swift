@@ -19,6 +19,7 @@ class TeacherListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    // data use in cells
     var teachers: [Teacher] = [
             Teacher(name: "Eyan", 
                     country: "United States",
@@ -41,12 +42,13 @@ class TeacherListViewController: UIViewController {
         super.viewDidLoad()
         // put the TeacherCell in identifier TeacherCell storyboard
         let teacherNib = UINib(nibName: "TeacherCell", bundle: nil)
-        let bannerNib = UINib(nibName: "BannerCell", bundle: nil)
-        
         self.tableView.register(teacherNib, forCellReuseIdentifier: "TeacherCell")
+        
+        let bannerNib = UINib(nibName: "BannerCell", bundle: nil)
         self.tableView.register(bannerNib, forCellReuseIdentifier: "BannerCell")
     }
     
+    // - goal: having 2 cells in 1 table view
     enum TableSection: Int, CaseIterable {
             case banner
             case teacher
